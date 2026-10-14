@@ -118,3 +118,93 @@
 // console.log("After replacing the Uber with Ola : ",comp);
 // comp.push("Amazone");
 // console.log("After Adding the Amazone at Last : ",comp);
+//Lecture - 05
+// function sahil(){
+//     console.log("Sahil is called !!!");
+// }
+// const arrowSum = (a,b)=>{
+//     console.log(a+b);
+// }
+// const arrowMulti = (a,b)=>{
+//     console.log(a*b);
+// }
+// arrowMulti(3,4);
+// const printHello = ()=>{
+//     console.log("Hello");
+// }
+// function CountVowel1(a){
+//     let cntVowel=0;
+//     for (let i=0;i<a.length;i++) {
+//         if(a[i] == 'a' || a[i]=='e' || a[i]=='i'|| a[i]=='o'|| a[i]=='u'){
+//             cntVowel++;
+//         }
+//     }
+//     return cntVowel;
+// }
+// const CountVowel = (a)=>{
+//     let cntVowel=0;
+//     for (let i=0;i<a.length;i++) {
+//         if(a[i] == 'a' || a[i]=='e' || a[i]=='i'|| a[i]=='o'|| a[i]=='u'){
+//             cntVowel++;
+//         }
+//     }
+//     return cntVowel;
+// }
+// console.log("By arrow function : ",CountVowel("sahil"));
+// console.log("By function keyword : ",CountVowel1("sahil alvi"));
+
+//For Each
+//when we want to perform task for a all elements present in it 
+// let arr = [1, 2, 3, 4, 5];
+//it is a higher order function (are those which takes function as a parameter or return the function)
+// arr.forEach((val) => {
+//     console.log(val);
+// });
+
+// let arr=[1,2,3,4,5,6];
+// arr.forEach((val)=>{ normally jabh kuch calculation kerni ho or kuch print karana ho
+//     console.log(val*val);
+// })
+
+//map => create a new array with the results of some operation
+// let nums=[67,52,39];
+// let newArr=nums.map((val)=>{  // new array create kernawith help of existing array
+//     return val%2==0;
+// });
+// console.log(newArr);
+
+//filter = creates a new array of elements that give true for a constion 
+//eg : all even elements
+
+// let ans=nums.filter((val)=>{
+//     return val%2==0;
+// });
+// console.log(ans);
+//reduce = performs some operations & reduces the array to a single value. it returns that single value.
+// let nums=[67,52,39];
+// const output=nums.reduce((prev,curr)=>{
+//     return prev>curr?prev:curr;
+// })
+// console.log(output);
+
+// let marks=[100,58,96,74,51,99,45,33,98];
+// let marksGret90=marks.filter((val)=>{
+//     return val>90;
+// });
+// console.log(marksGret90);
+
+// let n=prompt("Enter the number : ");
+// let arr=[];
+// for(let i=1;i<=n;i++){
+//     arr.push(i);
+// };
+// const SumArr=arr.reduce((prev,curr)=>{
+//     return prev+curr;
+// });
+// const ProdArr=arr.reduce((prev,curr)=>{
+//     return prev*curr;
+// });
+
+// console.log("The array is : ",arr);
+// console.log("The array Sum is : ",SumArr);
+// console.log("The array Multiplication is : ",ProdArr);
