@@ -247,8 +247,77 @@
 // newButton.setAttribute("class","clickBtn");
 // document.querySelector("body").prepend(newButton);
 // Q2 
-let newpara=document.createElement("p");
-newpara.innerHTML="Hello this is a new paragraph";
-document.querySelector("body").prepend(newpara);
-newpara.classList.add("p2")
-newpara.classList.add("p1")
+// let newpara=document.createElement("p");
+// newpara.innerHTML="Hello this is a new paragraph";
+// document.querySelector("body").prepend(newpara);
+// newpara.classList.add("p2")
+// newpara.classList.add("p1")
+
+// Lecture - 08
+// Events // script.js has higher priority the the inline javascript in html tags
+// the change in the state of an object is known as an Event
+let btn1 = document.querySelector('#btn1');
+// btn1.onclick = () => {
+//     console.log("btn1 was clicked");
+//     let a = 25;
+//     a++;
+//     console.log(a);
+// }
+// btn1.onclick=(e)=>{
+//     console.log(e.target);
+//     console.log(e.clientX,e.clientY);
+// }
+
+let div = document.querySelector("div");
+// div.onmouseover = ()=>{
+//     console.log("you are inside div");
+// }
+// const handler3=()=>{
+//     console.log("Button was CLicked - handler 3");
+// }
+// btn1.addEventListener("click",(e)=>{
+//     console.log("Button was CLicked - handler1");
+// })
+// btn1.addEventListener("click",()=>{
+//     console.log("Button was CLicked - handler 2");
+// })
+// btn1.addEventListener("click",handler3)
+// btn1.addEventListener("click",()=>{
+//     console.log("Button was CLicked - handler 4");
+// })
+// btn1.removeEventListener("click",handler3)
+// let modes=document.getElementById("mode").value;
+// console.log(modes);
+// let modeName=document.querySelector(".mode-description");
+// modeName.innerHTML=modes;
+// let cnt=document.querySelector(".count");
+// let CountVal = parseInt(cnt.textContent);
+// const increaseCount=()=>{
+//     CountVal+=1;
+//     cnt.innerText=CountVal;
+// }
+// const decreaseCount=()=>{
+//     CountVal-=1;
+//     cnt.innerText=CountVal;
+// }
+// const reset=()=>{
+//     CountVal=0;
+//     cnt.innerHTML=CountVal;
+// }
+
+const modebtn = () => {
+    let modes = document.querySelector(".modes");
+    
+    // Toggle between light-mode and dark-mode classes on the button
+    modes.classList.toggle("dark-mode");
+    modes.classList.toggle("light-mode");
+    
+    // Toggle button text and page background
+    if (modes.innerText.includes("Dark")) {
+        modes.innerHTML = "Light Mode";
+        document.body.style.backgroundColor = "black";
+    } else {
+        modes.innerHTML = "Dark Mode";
+        document.body.style.backgroundColor = "white";
+    }
+}
