@@ -201,10 +201,54 @@
 // const SumArr=arr.reduce((prev,curr)=>{
 //     return prev+curr;
 // });
-// const ProdArr=arr.reduce((prev,curr)=>{
+// const ProdA rr=arr.reduce((prev,curr)=>{
 //     return prev*curr;
 // });
 
 // console.log("The array is : ",arr);
 // console.log("The array Sum is : ",SumArr);
 // console.log("The array Multiplication is : ",ProdArr);
+
+//Lecture - 06
+
+// console.log("Hello forks!!!");
+// let firstP=document.getElementById('p');
+// setTimeout(() => {
+//     firstP.innerHTML="Hello my name is Sahil";
+// }, 2000);
+
+// let h2=document.querySelector("h1");
+// h2.innerText=h2.innerText+" from Apna College students "; //concatenate the two strings
+
+// let dives=document.querySelectorAll(".box");
+// console.dir(dives);
+// for(let i=0;i<dives.length;i++){
+//     dives[i].innerText="Box " +(i+1);
+// }
+
+//Lec - 07
+// let div = document.querySelector("div");
+// let id = div.getAttribute("class");
+// console.log(div);
+// console.log(id);
+// let para = document.querySelector("p");
+// console.log(para.setAttribute("class","newClass"));
+// para.style.backgroundColor="gray";
+
+// let newHeading = document.createElement("h1");
+// newHeading.innerHTML="<i><b>Hi, I am new!</b></i>";
+
+// document.querySelector("body").prepend(newHeading);
+
+//H.W - read more about appendChild() and removeChild()
+// Q1 create a new button element. 
+// let newButton = document.createElement("button");
+// newButton.innerHTML="click me"
+// newButton.setAttribute("class","clickBtn");
+// document.querySelector("body").prepend(newButton);
+// Q2 
+let newpara=document.createElement("p");
+newpara.innerHTML="Hello this is a new paragraph";
+document.querySelector("body").prepend(newpara);
+newpara.classList.add("p2")
+newpara.classList.add("p1")
