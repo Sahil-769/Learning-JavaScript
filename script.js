@@ -268,7 +268,7 @@ let btn1 = document.querySelector('#btn1');
 //     console.log(e.clientX,e.clientY);
 // }
 
-let div = document.querySelector("div");
+// let div = document.querySelector("div");
 // div.onmouseover = ()=>{
 //     console.log("you are inside div");
 // }
@@ -305,19 +305,174 @@ let div = document.querySelector("div");
 //     cnt.innerHTML=CountVal;
 // }
 
-const modebtn = () => {
-    let modes = document.querySelector(".modes");
-    
-    // Toggle between light-mode and dark-mode classes on the button
-    modes.classList.toggle("dark-mode");
-    modes.classList.toggle("light-mode");
-    
-    // Toggle button text and page background
-    if (modes.innerText.includes("Dark")) {
-        modes.innerHTML = "Light Mode";
-        document.body.style.backgroundColor = "black";
-    } else {
-        modes.innerHTML = "Dark Mode";
-        document.body.style.backgroundColor = "white";
-    }
-}
+// const modebtn = () => {
+//     let modes = document.querySelector(".modes");
+
+//     // Toggle between light-mode and dark-mode classes on the button
+//     modes.classList.toggle("dark-mode");
+//     modes.classList.toggle("light-mode");
+
+//     // Toggle button text and page background
+//     if (modes.innerText.includes("Dark")) {
+//         modes.innerHTML = "Light Mode";
+//         document.body.style.backgroundColor = "black";
+//     } else {
+//         modes.innerHTML = "Dark Mode";
+//         document.body.style.backgroundColor = "white";
+//     }
+// }
+
+// Callbacks , Promises and Async Await
+
+// function sum(a,b){
+//     console.log(a + b);
+// }
+
+// function calculator(a,b,sumCallback){
+//     sumCallback(a,b);
+// }
+// calculator(1,2,sum);
+// const hello=()=>{
+//     console.log("hello");
+// }
+// setTimeout(hello,3000);
+// function getData(dataId,getNextData){
+//     setTimeout(() => {
+//         console.log("data",dataId);
+//         if(getNextData){
+//             getNextData();
+//         }
+//     }, 2000);
+// }
+
+// callback hell
+// getData(1,()=>{
+//     console.log("getting data2 .....");
+//     getData(2,()=>{
+//         console.log("getting data3 .....");
+//         getData(3,()=>{
+//             console.log("getting data4 .....");
+//             getData(4);
+//         });
+//     })
+// });
+
+//Promises
+// let promise =new Promise((resolve,reject)=>{
+//     console.log("I am a Promise");
+
+// })
+
+// function getData(dataId,getNextData){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             //console.log("data",dataId);
+//             //resolve("success");
+//             reject("Error is occured !!");
+//             if(getNextData){
+//                 getNextData();
+//             }
+//         }, 2000);
+//     })
+// }
+//then() if promise resolve and catch if the promise reject catch()
+// const getPromise=()=>{
+//     return new Promise((res,rej)=>{
+//         console.log("I am a promise");
+//         // res("success");
+//         rej("network error");
+//     });
+// }
+// let promise = getPromise();
+// promise.then(()=>{
+//     console.log("promise fulfilled");
+// });
+// promise.catch((err)=>{
+//     console.log("rejected",err);
+// })
+//promise chaining
+// function asyncfunc1(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//             console.log("data1 is printed");
+//             res("Data1");
+//         }, 4000);
+//     })
+//  }
+// function asyncfunc2(){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//             console.log("data2 is printed");
+//             res("Data2");
+//         }, 4000);
+//     })
+// }
+//  let promise1= asyncfunc1();
+//  console.log("Data1 is fetching");
+//  promise1.then((res)=>{
+//     console.log("Data2 is fetching");
+//     let promise2= asyncfunc2();
+//     promise2.then((res)=>{
+//     })
+//  })
+
+// function getData(dataId){
+//     return new Promise((res,rej)=>{
+//         setTimeout(() => {
+//             console.log("data",dataId);
+//             res("success");
+//         }, 3000);
+//     })
+// }
+// getData(1).then((res)=>{
+//     return getData(2)
+// }).then(()=>{
+//         return getData(3)
+// }).then(()=>{
+//             console.log(res); 
+// })
+// Async and await
+// function sahil() {
+//     return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             console.log("I am a Sahil Alvi");
+//             res("Success");
+//         }, 4000);
+
+//     })
+
+// }
+// (async function myFunc() {
+//     await sahil();
+//     await sahil();
+//     await sahil();
+// })();
+//fetch API
+
+// const URL = "https://api.thecatapi.com/v1/breeds/abys";
+
+// const URL = "https://official-joke-api.appspot.com/jokes/random/";
+// let jokes = document.querySelector("#facts");
+// let btn = document.querySelector('#btn');
+
+// const getFacts = async () => {
+//     console.log("Getting data...");
+//     let response = await fetch(URL);
+//     let data = await response.json();
+//     jokes.innerHTML=data.setup+' '+data.punchline;
+//     console.log(data);
+//     console.log(data.setup);
+//     console.log(data.punchline);
+// };
+// promise chaining
+// function getFacts(){
+//     fetch(URL).then((res)=>{
+//         return res.json();
+//     }).then((data)=>{
+//         console.log(data);
+//         jokes.innerHTML=data.setup+' '+data.punchline;
+//     })
+// }
+
+// btn.addEventListener("click",getFacts);
+

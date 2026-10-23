@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    background: radial-gradient(circle at top left, #fff8e8, transparent 45%), #f4e4ba;
+    color: #29251f;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.container {
+    width: min(24rem, 100%);
+    padding: 2rem;
+    border: 1px solid rgba(91, 65, 39, 0.12);
+    border-radius: 1rem;
+    background-color: #fffefa;
+    box-shadow: 0 1rem 2.5rem rgba(78, 55, 28, 0.14);
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #34291f;
+}
+
+form {
+    margin: 1.75rem 0 0.25rem;
+}
+
+.amount p,
+.from p,
+.to p {
+    margin-bottom: 0.5rem;
+    color: #6e6255;
+    font-size: 0.9rem;
+}
+
+form select,
+form button,
+form input {
+    border: none;
+    outline: none;
+    border-radius: 0.65rem;
+}
+
+form input {
+    width: 100%;
+    height: 3rem;
+    padding: 0 0.85rem;
+    border: 1px solid #ded8ce;
+    background: #fff;
+    font: inherit;
+    font-size: 1rem;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+form input:focus,
+.select-container:focus-within {
+    border-color: #af4d98;
+    box-shadow: 0 0 0 3px rgba(175, 77, 152, 0.14);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.dropdown i {
+    margin-top: 1rem;
+    color: #af4d98;
+    font-size: 1.2rem;
+}
+
+.select-container img {
+    width: 2rem;
+    height: auto;
+}
+
+.select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    width: 6.25rem;
+    min-height: 2.75rem;
+    border: 1px solid #ded8ce;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.select-container select {
+    width: auto;
+    background: transparent;
+    color: #29251f;
+    font: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.msg {
+    min-height: 1.5rem;
+    margin: 1.5rem 0;
+    color: #514439;
+    font-weight: 600;
+}
+
+form button {
+    width: 100%;
+    min-height: 3rem;
+    background-color: #9d3f86;
+    color: #fff;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+form button:hover {
+    background-color: #85316f;
+}
+
+form button:active {
+    transform: translateY(1px);
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 1.5rem;
+    }
+}
